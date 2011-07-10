@@ -1,4 +1,5 @@
 <?php
 PathManager::loadPaths(
-    array("/", "index")
+    array("/", "index"),
+    array("/repository/add", "add", "Repository")
 );
