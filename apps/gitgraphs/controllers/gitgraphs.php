@@ -1,5 +1,5 @@
 <?php
-class DefaultController extends Controller {
+class GitgraphsController extends Controller {
     public function index() {
         // world changing code goes here
     }
