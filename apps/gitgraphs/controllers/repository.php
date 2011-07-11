@@ -8,6 +8,17 @@ class RepositoryController extends Controller {
         }
 
         // add to repo table
-        // add to repo queue
+        $repository = Table::factory('Repositories')->newObject();
+        $data = array(
+            'url' => $this->request->getVar('repository'),
+        );
+
+        if ($repository->setValues($data)) {
+            $repository->save();
+        }
+
+        return $this->render('repository/added');
+
+        // @todo add to repo queue
     }
 }
